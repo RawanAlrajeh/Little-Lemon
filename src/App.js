@@ -1,8 +1,18 @@
+import React from "react";
+import Sidebar from "./components/Sidebar/Sidebar";
+import Links from "./Routes/Links";
+import { NavigationProvider } from "./context/navigation";
+
 function App() {
   return (
-    <div>
-      <p>Homepage</p>
-    </div>
+    <NavigationProvider>
+      <div>
+        <Sidebar />
+        <div>
+          <Links />
+        </div>
+      </div>
+    </NavigationProvider>
   );
 }
 
